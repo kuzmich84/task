@@ -1,4 +1,4 @@
-import {Colors} from "../const";
+import {COLORS} from "../const";
 
 const DescriptionItems = [
   `Изучить теорию`,
@@ -6,7 +6,7 @@ const DescriptionItems = [
   `Пройти интенсив на соточку`,
 ];
 
-const DefaultRepeatingDays = {
+const DEFAULTREPEATINGDAYS = {
   'mo': false,
   'tu': false,
   'we': false,
@@ -16,7 +16,7 @@ const DefaultRepeatingDays = {
   'su': false,
 };
 
-const Tags = [
+const TAGS = [
   `homework`,
   `theory`,
   `practice`,
@@ -44,7 +44,7 @@ const getRandomDate = () => {
 };
 
 const generateRepeatingDays = () => {
-  return Object.assign({}, DefaultRepeatingDays, {
+  return Object.assign({}, DEFAULTREPEATINGDAYS, {
     'mo': Math.random() > 0.5,
   });
 };
@@ -61,9 +61,9 @@ const generateTask = () => {
   return {
     description: getRandomArrayItem(DescriptionItems),
     dueDate,
-    repeatingDays: dueDate ? DefaultRepeatingDays : generateRepeatingDays(),
-    tags: new Set(generateTags(Tags)),
-    color: getRandomArrayItem(Colors),
+    repeatingDays: dueDate ? DEFAULTREPEATINGDAYS : generateRepeatingDays(),
+    tags: new Set(generateTags(TAGS)),
+    color: getRandomArrayItem(COLORS),
     isFavorite: Math.random() > 0.5,
     isArchive: Math.random() > 0.5,
   };
