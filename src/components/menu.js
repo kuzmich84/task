@@ -1,7 +1,5 @@
 export const createMenu = () => {
   return (`
-    <section class="main__control control container">
-        <h1 class="control__title">TASKMANAGER</h1>
         <section class="control__btn-wrap">
           <input
             type="radio"
@@ -30,6 +28,5 @@ export const createMenu = () => {
             >STATISTICS</label
           >
         </section>
-      </section>
-  `);
+`);
 };
